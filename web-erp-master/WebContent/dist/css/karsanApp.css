@@ -1,0 +1,37 @@
+@charset "ISO-8859-1";
+
+
+hr {
+	margin: 5px auto;
+}
+
+i{
+      cursor: pointer;
+    }
+    
+.karsan-logo{
+	margin: 250px;
+    width: 40%;
+}
+
+input{
+	
+}
+
+textarea {
+	
+}
+
+select {
+	text-transform: uppercase;
+}
+
+.login_input{
+	text-transform: none;
+}
+
+.form_mandatory{
+	color: red;
+	margin: 5px;
+	
+}
