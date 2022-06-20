@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/Twilio/com.fasterxml.jackson.databind.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/commons-codec-1.15.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/commons-io-2.7.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/httpclient-4.5.13.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/httpcore-4.4.13.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jackson-annotations-2.11.3.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jackson-core-2.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jackson-core-2.11.3.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jackson-databind-2.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jackson-databind-2.11.3.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jackson-datatype-jsr310-2.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jackson-datatype-jsr310-2.11.3.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/javax.activation-api-1.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jjwt-api-0.11.2.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jjwt-impl-0.11.2.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/jjwt-jackson-0.11.2.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/log4j-api-2.14.0.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/log4j-core-2.14.0.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/Twilio/twilio-8.5.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

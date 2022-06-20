@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>MakeCall</servlet-name>
+		<display-name>MakeCall</display-name>
+		<description></description>
+		<servlet-class>MakeCall</servlet-class>
+		
+	</servlet>
+	<servlet>
+		<servlet-name>CallServlet</servlet-name>
+		<display-name>CallServlet</display-name>
+		<description></description>
+		<servlet-class>com.twilio.clicktocall.servlet.CallServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConnectServlet</servlet-name>
+		<display-name>ConnectServlet</display-name>
+		<description></description>
+		<servlet-class>com.twilio.clicktocall.servlet.ConnectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MakeCall</servlet-name>
+		<url-pattern>/MakeCall</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CallServlet</servlet-name>
+		<url-pattern>/CallServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConnectServlet</servlet-name>
+		<url-pattern>/ConnectServlet</url-pattern>
+	</servlet-mapping>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/500.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>com.twilio.exception.ApiException</exception-type>
+		<location>/500.jsp</location>
+	</error-page>
+	
+</web-app>
