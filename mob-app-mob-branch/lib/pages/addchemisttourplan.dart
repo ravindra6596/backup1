@@ -1,0 +1,220 @@
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
+
+class ChemistTourPlan extends StatefulWidget {
+  @override
+  _ChemistTourPlanState createState() => _ChemistTourPlanState();
+}
+
+class _ChemistTourPlanState extends State<ChemistTourPlan> {
+  final String url =
+      "http://healthcareapi-env.eba-83fpcz2g.ap-south-1.elasticbeanstalk.com/products";
+  DateTime date2;
+  Future<List<dynamic>> fetchUsers() async {
+    WidgetsFlutterBinding.ensureInitialized();
+
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    var token = sharedPreferences.getString('token');
+
+    var result = await http.get(Uri.parse(url), headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': 'Bearer $token',
+    });
+
+    return json.decode(result.body);
+  }
+
+  String pname(dynamic tpaln) {
+    return tpaln['pname'];
+  }
+
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Chemist TourPlan"),
+        ),
+        body: SingleChildScrollView(
+            child: Column(
+          children: [
+            Container(
+                padding: EdgeInsets.all(10),
+                child: DateTimeField(
+                  //inputType: InputType.date,
+                  format: DateFormat("dd-MM-yyyy"),
+                  //initialDate: DateTime.now(),
+                  keyboardType: TextInputType.datetime,
+                  //editable: false,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Select Date',
+                  ),
+                  onChanged: (dt) {
+                    setState(() => date2 = dt);
+                  },
+                )),
+            Column(
+              children: [
+                Card(
+                  margin: EdgeInsets.fromLTRB(20, 2, 20, 2),
+                  child: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(20, 20, 0, 10),
+                          height: 60,
+                          width: 200,
+                          child: Text('Damini '),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Container(
+                              height: 50,
+                              width: 100,
+                              child: Icon(Icons.delete),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.fromLTRB(20, 2, 20, 2),
+                  child: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(20, 20, 0, 10),
+                          height: 60,
+                          width: 200,
+                          child: Text('ABC'),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Container(
+                              height: 50,
+                              width: 100,
+                              child: Icon(Icons.delete),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.fromLTRB(20, 2, 20, 2),
+                  child: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(20, 20, 0, 10),
+                          height: 60,
+                          width: 200,
+                          child: Text('Ravindra'),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Container(
+                              height: 50,
+                              width: 100,
+                              child: Icon(Icons.delete),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.fromLTRB(20, 2, 20, 2),
+                  child: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(20, 20, 0, 10),
+                          height: 60,
+                          width: 200,
+                          child: Text('Bill Gates'),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Container(
+                                height: 50, width: 100, child: Icon(Icons.add))
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.fromLTRB(20, 2, 20, 2),
+                  child: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(20, 20, 0, 10),
+                          height: 60,
+                          width: 200,
+                          child: Text('Manoj'),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Container(
+                                height: 50, width: 100, child: Icon(Icons.add))
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.fromLTRB(20, 2, 20, 2),
+                  child: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(20, 20, 0, 10),
+                          height: 60,
+                          width: 200,
+                          child: Text('Damini'),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Container(
+                                height: 50, width: 100, child: Icon(Icons.add))
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Container(
+                width: MediaQuery.of(context).size.width,
+                height: 50.0,
+                padding: EdgeInsets.symmetric(horizontal: 15.0),
+                margin: EdgeInsets.only(top: 15.0),
+                child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text("Submit",
+                        style: TextStyle(
+                          color: Colors.white,
+                          backgroundColor: Colors.blue,
+                        ))))
+          ],
+        )));
+  }
+}

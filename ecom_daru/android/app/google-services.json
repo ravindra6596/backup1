@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "951488202473",
+    "project_id": "ecom-daru",
+    "storage_bucket": "ecom-daru.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951488202473:android:40a720ff49dfaf5f455278",
+        "android_client_info": {
+          "package_name": "com.example.ecom_daru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951488202473-9rqpksrig94dugoe2kkc091651p5dai0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecom_daru",
+            "certificate_hash": "c5c941f215fba85873635cbf2d5f41bc11fdae7b"
+          }
+        },
+        {
+          "client_id": "951488202473-petss5hics9l76n9nkuh1h3360ftnv3t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNeOstBceqznhfQUEqMcwVrEQ6dlQ8NbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951488202473-petss5hics9l76n9nkuh1h3360ftnv3t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
